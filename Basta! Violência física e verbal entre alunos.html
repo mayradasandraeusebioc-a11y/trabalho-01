@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Basta! Violência física e verbal entre alunos</title>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;800&family=Source+Serif+4:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f4f6f9;--surface:#fff;--ink:#14213d;--muted:#4b5a73;--line:#d5dbe5;--amber:#fca311;--on-amber:#14213d;--teal:#1d7f78;--coral:#c8432b;--hero:#14213d;--hero-ink:#fff;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e1628;--surface:#17233b;--ink:#eef2f8;--muted:#a9b6cc;--line:#2b3b59;--teal:#4fc3b9;--coral:#ff8a70;--hero:#0a1120}}
+:root[data-theme="dark"]{--bg:#0e1628;--surface:#17233b;--ink:#eef2f8;--muted:#a9b6cc;--line:#2b3b59;--teal:#4fc3b9;--coral:#ff8a70;--hero:#0a1120}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(64px + env(safe-area-inset-top,0px))}
+body{margin:0;background:var(--bg);color:var(--ink);font:18px/1.65 "Source Serif 4",Georgia,serif}
+h1,h2,h3,.sans{font-family:"Bricolage Grotesque","Segoe UI",Arial,sans-serif;line-height:1.15;margin:0}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--amber);outline-offset:2px}
+header{position:sticky;top:0;z-index:20;background:var(--hero);color:var(--hero-ink);padding-top:env(safe-area-inset-top,0px)}
+nav{display:flex;gap:4px;align-items:center;max-width:1100px;margin:auto;padding:0 12px;overflow-x:auto;height:56px;scrollbar-width:none}
+nav b{font:800 20px "Bricolage Grotesque",sans-serif;color:var(--amber);margin-right:12px;white-space:nowrap}
+nav a{font:500 15px "Bricolage Grotesque",sans-serif;text-decoration:none;padding:8px 12px;border-radius:8px;white-space:nowrap;color:var(--hero-ink)}
+nav a:hover,nav a.on{background:rgba(255,255,255,.14)}
+.hero{background:var(--hero);color:var(--hero-ink);padding:48px 20px 64px}
+.wrap{max-width:1100px;margin:auto}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:32px;align-items:center}
+.hero h1{font-size:clamp(64px,13vw,150px);font-weight:800;letter-spacing:-.03em;color:var(--amber)}
+.hero p{font-size:20px;max-width:34ch;margin:16px 0 24px}
+.btn{display:inline-block;background:var(--amber);color:var(--on-amber);font:800 16px "Bricolage Grotesque",sans-serif;padding:14px 22px;border-radius:10px;text-decoration:none;border:0;cursor:pointer}
+.btn.alt{background:transparent;color:var(--hero-ink);border:2px solid var(--hero-ink);margin-left:8px}
+section{padding:64px 20px}
+section:nth-of-type(even){background:var(--surface)}
+h2{font-size:clamp(30px,5vw,46px);margin-bottom:20px}
+h3{font-size:22px;margin:24px 0 8px}
+.lead{font-size:21px;max-width:60ch}
+p,li{max-width:68ch}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;margin-top:24px}
+.box{background:var(--surface);border:1px solid var(--line);border-left:6px solid var(--teal);border-radius:10px;padding:18px 20px}
+section:nth-of-type(even) .box{background:var(--bg)}
+.box.red{border-left-color:var(--coral)}
+.box.amb{border-left-color:var(--amber)}
+.box h3{margin-top:0}
+ul{padding-left:22px}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin:20px 0}
+.tab{font:700 16px "Bricolage Grotesque",sans-serif;padding:10px 18px;border-radius:999px;border:2px solid var(--ink);background:transparent;color:var(--ink);cursor:pointer}
+.tab[aria-selected="true"]{background:var(--ink);color:var(--bg)}
+[hidden]{display:none!important}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:center}
+.chart{display:flex;flex-direction:column;gap:10px;margin:20px 0;max-width:560px}
+.bar{display:grid;grid-template-columns:150px 1fr;gap:12px;align-items:center;font:500 15px "Bricolage Grotesque",sans-serif}
+.bar i{display:block;height:20px;border-radius:4px;background:var(--coral)}
+.quiz{background:var(--hero);color:var(--hero-ink);border-radius:14px;padding:28px;margin-top:28px}
+.quiz h3{margin-top:0;color:var(--amber)}
+.quiz .opts{display:flex;gap:10px;flex-wrap:wrap;margin:14px 0}
+.quiz button{font:700 16px "Bricolage Grotesque",sans-serif;padding:10px 18px;border-radius:8px;border:2px solid var(--hero-ink);background:transparent;color:var(--hero-ink);cursor:pointer}
+.quiz button:hover{background:rgba(255,255,255,.14)}
+.quiz .fb{min-height:3.4em;margin:0}
+.poster{background:var(--amber);color:var(--on-amber);border-radius:14px;padding:28px;text-align:center}
+.poster h3{font-size:34px;margin:0 0 8px}
+.poster p{margin:6px auto;font-weight:600}
+cite{font-style:normal}
+footer{background:var(--hero);color:var(--hero-ink);padding:32px 20px calc(32px + env(safe-area-inset-bottom,0px));font-size:15px}
+@media (max-width:760px){.hero .wrap,.two{grid-template-columns:1fr}.bar{grid-template-columns:110px 1fr}section{padding:48px 16px}body{font-size:17px}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header><nav aria-label="Menu principal">
+<b>Basta!</b>
+<a href="#inicio">Início</a><a href="#introducao">Introdução</a><a href="#objectivos">Objectivos</a><a href="#desenvolvimento">Desenvolvimento</a><a href="#solucoes">Soluções</a><a href="#recomendacoes">Recomendações</a><a href="#conclusao">Conclusão</a><a href="#referencias">Referências</a>
+</nav></header>
+
+<main>
+<div class="hero" id="inicio">
+<div class="wrap">
+<div>
+<h1>Basta!</h1>
+<h2 style="font-size:clamp(24px,4vw,36px);margin-bottom:0">Violência física e verbal entre alunos</h2>
+<p>Empurrões, insultos e ameaças não são brincadeira. Descobre como reconhecer, travar e prevenir a violência na nossa escola.</p>
+<a class="btn" href="#desenvolvimento">Compreender o problema</a><a class="btn alt" href="#solucoes">Ver soluções</a>
+</div>
+<svg viewBox="0 0 400 360" role="img" aria-label="Uma mão aberta a dizer pára, entre dois balões de insultos riscados" style="width:100%;height:auto">
+<g fill="none" stroke-linecap="round" stroke-linejoin="round">
+<rect x="20" y="30" width="150" height="70" rx="18" fill="#c8432b"/>
+<path d="M60 100 L48 128 L88 100" fill="#c8432b"/>
+<path d="M45 65h100M45 80h60" stroke="#fff" stroke-width="7" opacity=".85"/>
+<rect x="240" y="60" width="140" height="64" rx="18" fill="#1d7f78"/>
+<path d="M340 124 L356 150 L310 124" fill="#1d7f78"/>
+<path d="M265 92h90" stroke="#fff" stroke-width="7" opacity=".85"/>
+<g transform="translate(120 130)" fill="#fca311" stroke="#14213d" stroke-width="6">
+<path d="M40 90 V30 a14 14 0 0 1 28 0 V80 V14 a14 14 0 0 1 28 0 V80 V22 a14 14 0 0 1 28 0 V84 V46 a14 14 0 0 1 28 0 V120 C152 175 120 205 88 205 C52 205 36 170 22 140 L8 112 a13 13 0 0 1 22 -14 Z"/>
+</g>
+<path d="M30 190 l60 50 M90 190 l-60 50" stroke="#fff" stroke-width="10" opacity="0"/>
+</g></svg>
+</div></div>
+
+<section id="introducao"><div class="wrap">
+<h2>Introdução</h2>
+<p class="lead">Na escola devemos aprender, fazer amigos e sentir-nos seguros. Quando um aluno é agredido ou humilhado por colegas, tudo isso fica em risco.</p>
+<p>A violência entre alunos acontece no recreio, na sala de aula, no caminho para casa e também nas redes sociais. Pode ser <strong>física</strong> (bater, empurrar, estragar os pertences de alguém) ou <strong>verbal</strong> (insultar, ameaçar, pôr alcunhas, espalhar boatos). Muitas vezes começa como "brincadeira" e vai crescendo.</p>
+<p>Este tema é importante porque afecta as notas, a saúde e a vontade de ir à escola. Afecta quem sofre, quem agride e quem assiste. Se ninguém fizer nada, a violência torna-se normal.</p>
+</div></section>
+
+<section id="objectivos"><div class="wrap">
+<h2>Objectivos</h2>
+<p>Com este website, o nosso grupo pretende:</p>
+<div class="grid">
+<div class="box"><h3>Explicar</h3><p>O que é a violência física e verbal entre alunos e como se manifesta.</p></div>
+<div class="box"><h3>Analisar</h3><p>As causas e as consequências para a vida escolar e pessoal.</p></div>
+<div class="box"><h3>Propor</h3><p>Medidas práticas de prevenção que a escola e os alunos podem aplicar.</p></div>
+<div class="box"><h3>Sensibilizar</h3><p>Alunos, professores e encarregados de educação a não ficarem calados.</p></div>
+</div></div></section>
+
+<section id="desenvolvimento"><div class="wrap">
+<h2>Desenvolvimento</h2>
+<p class="lead">Há dois tipos principais de violência entre alunos. Escolhe um para ver exemplos.</p>
+<div class="tabs" role="tablist" data-group="tipo">
+<button class="tab" role="tab" aria-selected="true" data-t="fisica">Violência física</button>
+<button class="tab" role="tab" aria-selected="false" data-t="verbal">Violência verbal</button>
+</div>
+<div data-group="tipo" data-p="fisica">
+<div class="grid">
+<div class="box red"><h3>O que é</h3><p>Qualquer agressão contra o corpo ou os bens de outra pessoa.</p></div>
+<div class="box red"><h3>Exemplos</h3><ul><li>Socos, pontapés e empurrões</li><li>Puxar o cabelo, beliscar</li><li>Esconder ou estragar material</li><li>Obrigar alguém a fazer algo à força</li></ul></div>
+</div></div>
+<div data-group="tipo" data-p="verbal" hidden>
+<div class="grid">
+<div class="box amb"><h3>O que é</h3><p>Uso de palavras para magoar, humilhar ou meter medo.</p></div>
+<div class="box amb"><h3>Exemplos</h3><ul><li>Insultos e alcunhas humilhantes</li><li>Ameaças</li><li>Gozar com o aspecto, a roupa, a voz ou as notas</li><li>Boatos e mensagens ofensivas nas redes sociais</li></ul></div>
+</div></div>
+
+<h3>Causas</h3>
+<div class="grid">
+<div class="box"><h3>Em casa</h3><p>Violência familiar, falta de atenção ou de regras claras.</p></div>
+<div class="box"><h3>Entre colegas</h3><p>Pressão do grupo, desejo de parecer forte ou de ser aceite.</p></div>
+<div class="box"><h3>Na escola</h3><p>Falta de vigilância, de regras claras e de actividades para os alunos.</p></div>
+<div class="box"><h3>Nas emoções</h3><p>Raiva, frustração e dificuldade em resolver conflitos com palavras.</p></div>
+</div>
+
+<h3>Consequências</h3>
+<div class="two">
+<div>
+<p><strong>Para quem sofre:</strong> medo, tristeza, ansiedade, isolamento, notas baixas e faltas à escola.</p>
+<p><strong>Para quem agride:</strong> castigos, suspensão, perda de amigos e de confiança.</p>
+<p><strong>Para quem assiste:</strong> culpa, insegurança e um ambiente escolar tenso.</p>
+</div>
+<div class="chart" role="img" aria-label="Infográfico ilustrativo do impacto na vida escolar">
+<div class="bar"><span>Concentração</span><i style="width:85%"></i></div>
+<div class="bar"><span>Notas</span><i style="width:75%"></i></div>
+<div class="bar"><span>Presença na aula</span><i style="width:65%"></i></div>
+<div class="bar"><span>Amizades</span><i style="width:55%"></i></div>
+<small style="color:var(--muted)">Infográfico ilustrativo: quanto mais comprida a barra, maior o efeito negativo que a violência pode ter.</small>
+</div></div>
+
+<h3>Impacto na vida escolar</h3>
+<p>Um aluno que vive com medo não consegue aprender bem. Aprende menos, falta mais e pode até abandonar a escola. A violência não prejudica apenas uma pessoa: estraga o ambiente de toda a turma.</p>
+
+<div class="quiz">
+<h3>Isto é violência?</h3>
+<p id="qtext"></p>
+<div class="opts"><button id="yes">Sim</button><button id="no">Não</button></div>
+<p class="fb" id="fb" aria-live="polite"></p>
+<button id="next" hidden>Próxima situação</button>
+</div>
+</div></section>
+
+<section id="solucoes"><div class="wrap">
+<h2>Soluções e medidas de prevenção</h2>
+<p class="lead">Prevenir é mais eficaz do que castigar. Estas são as nossas propostas.</p>
+<div class="grid">
+<div class="box"><h3>Falar sem medo</h3><p>Criar na escola uma caixa de denúncias anónima e um gabinete de apoio ao aluno.</p></div>
+<div class="box"><h3>Regras claras</h3><p>Regulamento escolar conhecido por todos, com consequências justas e iguais para todos.</p></div>
+<div class="box"><h3>Mais vigilância</h3><p>Professores e funcionários atentos ao recreio, aos corredores e às casas de banho.</p></div>
+<div class="box"><h3>Alunos mediadores</h3><p>Grupos de alunos formados para ajudar a resolver conflitos antes de chegarem à agressão.</p></div>
+<div class="box"><h3>Palestras e debates</h3><p>Encontros regulares sobre respeito, emoções e uso responsável das redes sociais.</p></div>
+<div class="box"><h3>Tempo livre com sentido</h3><p>Desporto, teatro, música e clubes para canalizar a energia de forma positiva.</p></div>
+</div></div></section>
+
+<section id="recomendacoes"><div class="wrap">
+<h2>Recomendações</h2>
+<div class="tabs" role="tablist" data-group="rec">
+<button class="tab" role="tab" aria-selected="true" data-t="alunos">Alunos</button>
+<button class="tab" role="tab" aria-selected="false" data-t="prof">Professores</button>
+<button class="tab" role="tab" aria-selected="false" data-t="enc">Encarregados</button>
+<button class="tab" role="tab" aria-selected="false" data-t="dir">Direcção</button>
+</div>
+<div data-group="rec" data-p="alunos"><ul><li>Respeita todos os colegas, mesmo os que são diferentes de ti.</li><li>Não aplaudas, não filmes e não ries quando alguém é agredido.</li><li>Defende o colega e avisa um adulto. Pedir ajuda não é "queixinhas".</li><li>Se estás com raiva, pára, respira e fala em vez de bater.</li></ul></div>
+<div data-group="rec" data-p="prof" hidden><ul><li>Intervir logo, mesmo perante "pequenos" insultos.</li><li>Ouvir o aluno com atenção e sem o culpar.</li><li>Dar o exemplo: tratar todos os alunos com respeito.</li><li>Comunicar os casos à direcção e aos encarregados de educação.</li></ul></div>
+<div data-group="rec" data-p="enc" hidden><ul><li>Conversar todos os dias com os filhos sobre a escola.</li><li>Estar atento a sinais: medo, tristeza, marcas, notas a baixar.</li><li>Ensinar que a violência não resolve nada.</li><li>Colaborar com a escola e não resolver os conflitos com mais violência.</li></ul></div>
+<div data-group="rec" data-p="dir" hidden><ul><li>Aplicar o regulamento de forma justa e rápida.</li><li>Criar um serviço de apoio psicológico e social ao aluno.</li><li>Formar professores para detectar e travar a violência.</li><li>Envolver a comunidade e os encarregados na prevenção.</li></ul></div>
+
+<div class="poster" style="margin-top:32px">
+<h3>Cartaz: não fiques calado!</h3>
+<p>Viste? Ouviste? Fala com um professor ou com um adulto de confiança.</p>
+<p>Uma escola segura é responsabilidade de todos.</p>
+</div>
+</div></section>
+
+<section id="conclusao"><div class="wrap">
+<h2>Conclusão</h2>
+<p class="lead">A violência física e verbal entre alunos é um problema sério, mas pode ser travado.</p>
+<p>Vimos que ela tem várias causas, deixa marcas em quem sofre, em quem agride e em quem assiste, e prejudica a aprendizagem de todos. Vimos também que há soluções: diálogo, regras claras, apoio na escola e participação de alunos, professores e famílias.</p>
+<p>Cada um de nós pode fazer a diferença. <strong>Respeitar, não calar e ajudar</strong> são os primeiros passos para uma escola em que todos se sintam seguros.</p>
+</div></section>
+
+<section id="referencias"><div class="wrap">
+<h2>Referências bibliográficas</h2>
+<ul>
+<li>UNESCO (2019). <cite>Behind the numbers: Ending school violence and bullying</cite>. Paris: UNESCO.</li>
+<li>Organização Mundial da Saúde (2002). <cite>Relatório mundial sobre violência e saúde</cite>. Genebra: OMS.</li>
+<li>UNICEF. <cite>Violência contra crianças</cite>. Disponível em unicef.org.</li>
+<li>Regulamento interno da nossa escola.</li>
+</ul>
+</div></section>
+</main>
+
+<footer><div class="wrap"><p style="margin:0 0 8px">Trabalho escolar sobre violência física e verbal entre alunos.</p><p style="margin:0"><strong>Turma B02.</strong> Grupo: Kelven Dimande, Keuma Zulu, Keila da Natalia, Marlene Mondlane, Mayra da Sandra, Mayra Notico, Michela Manhique e Milena Congolo.</p></div></footer>
+
+<script>
+(function(){
+document.querySelectorAll('.tabs').forEach(function(g){
+ var name=g.getAttribute('data-group');
+ g.addEventListener('click',function(e){
+  var b=e.target.closest('.tab');if(!b)return;
+  g.querySelectorAll('.tab').forEach(function(x){x.setAttribute('aria-selected',x===b?'true':'false')});
+  document.querySelectorAll('[data-group="'+name+'"][data-p]').forEach(function(p){p.hidden=p.getAttribute('data-p')!==b.getAttribute('data-t')});
+ });
+});
+var Q=[
+["Um colega empurra outro no corredor «só a brincar» e o outro fica com medo.",true,"Sim. Se a outra pessoa se sente magoada ou com medo, não é brincadeira."],
+["Dois amigos discutem um jogo, cada um explica a sua opinião e no fim fazem as pazes.",false,"Não. Discordar e dialogar com respeito é normal. Violência é magoar ou intimidar."],
+["Um grupo cria uma alcunha humilhante para um aluno e todos o chamam assim.",true,"Sim. É violência verbal, mesmo sem tocar em ninguém."],
+["Alguém espalha num grupo de mensagens um boato mentiroso sobre uma colega.",true,"Sim. Os boatos nas redes sociais também ferem e podem durar muito tempo."]
+];
+var i=0,ans=false,t=document.getElementById('qtext'),fb=document.getElementById('fb'),nx=document.getElementById('next');
+function show(){t.textContent=Q[i][0];fb.textContent='';nx.hidden=true;ans=false}
+function pick(v){if(ans)return;ans=true;fb.textContent=(v===Q[i][1]?'Certo! ':'Quase. ')+Q[i][2];nx.hidden=false;nx.textContent=i<Q.length-1?'Próxima situação':'Recomeçar'}
+document.getElementById('yes').onclick=function(){pick(true)};
+document.getElementById('no').onclick=function(){pick(false)};
+nx.onclick=function(){i=(i+1)%Q.length;show()};
+show();
+var links=document.querySelectorAll('nav a'),secs=[].slice.call(document.querySelectorAll('#inicio,section'));
+function spy(){var y=window.scrollY+120,cur=secs[0];secs.forEach(function(s){if(s.offsetTop<=y)cur=s});links.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+cur.id)})}
+window.addEventListener('scroll',spy,{passive:true});spy();
+})();
+</script>
+</body>
+</html>
